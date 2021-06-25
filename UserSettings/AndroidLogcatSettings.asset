@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "ce0917192a283c2c057e",
         "name": "com.ngarden.staff",
-        "processId": 32296,
+        "processId": 3762,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -54,6 +54,12 @@
             "deviceId": "ce0917192a283c2c057e",
             "name": "com.ngarden.staff",
             "processId": 32296,
+            "exited": false
+        },
+        {
+            "deviceId": "ce0917192a283c2c057e",
+            "name": "com.ngarden.staff",
+            "processId": 3762,
             "exited": false
         }
     ],

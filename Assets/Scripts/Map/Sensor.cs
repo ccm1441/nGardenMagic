@@ -21,12 +21,12 @@ public class Sensor : MonoBehaviour
             Generator();
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        print("map : " + _isCreate);
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
-            Generator();        
-    }
+    //private void OnTriggerStay2D(Collider2D collision)
+    //{
+    //    print("map : " + _isCreate);
+    //    if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+    //        Generator();        
+    //}
 
     private void Generator()
     {
