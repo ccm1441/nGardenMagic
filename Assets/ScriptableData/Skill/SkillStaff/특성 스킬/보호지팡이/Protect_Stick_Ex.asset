@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39239bcbdecd5d24da21ebc4d35059f1, type: 3}
+  m_Name: Protect_Stick_Ex
+  m_EditorClassIdentifier: 
+  UsePassive: 0
+  Name: "\uC274\uB4DC \uAC15\uD654"
+  Image: {fileID: 21300000, guid: 5913bfe685147244298c4155ce3038c9, type: 3}
+  skillImage: {fileID: 21300000, guid: bcf4473ac044c3b41b2b413c304e409a, type: 3}
+  Explain: "\uCE90\uB9AD\uD130\uB97C \uBCF4\uD638\uD558\uB294 \uC274\uB4DC\uB97C
+    \uC0DD\uC131\uD55C\uB2E4."
+  Type: 5
+  MaxLevel: 6
+  LevelUpRewardValue:
+  - ability: 38
+    value: -5
+    unit: 0
+    SetAbility: 0
+  isUniqueWeapon: 0
+  openExplain: 
+  requireMapOpen: 0
+  map: 0
+  openValue: 0
+  StaffName: "\uBCF4\uD638 \uC9C0\uD321\uC774"
+  ScriptName: 2
+  staffOption: []
+  BulletPrefab: {fileID: 2794016443024554040, guid: 17b975351e3cc804fa8aaab9898b47fc,
+    type: 3}
+  BulletSpeed: 0
+  BulletMaxDistance: 0
+  AttackValue: 0
+  AttackCoolTime: 18
+  UseDuration: 0
+  DurationTime: 0
+  DurationAttackCool: 0
+  UseRange: 0
+  RangeDataType: 0
+  RangeCharValue: 0
+  RangeRadius: 0
+  RangeVector: {x: 0, y: 0}
+  targetingTarget: 0
+  bouncingTarget: 0
+  penetrationTarget: 0
+  bouncingTargetCount: 0
+  penetrationTargetCount: 0
+  pullTarget: 0
+  slowTarget: 0
+  StaffAddSkill: []
+  isSpecialSkill: 1
+  specialSkill:
+  - ability: 30
+    value: 0
+    unit: 3
+    SetAbility: 1
+  - ability: 20
+    value: 1
+    unit: 2
+    SetAbility: 0
+  - ability: 38
+    value: -2.5
+    unit: 2
+    SetAbility: 0
+  - ability: 30
+    value: 0
+    unit: 3
+    SetAbility: 1
+  - ability: 7
+    value: 50
+    unit: 0
+    SetAbility: 0
+  - ability: 29
+    value: 0
+    unit: 3
+    SetAbility: 1
+  - ability: 7
+    value: 5
+    unit: 0
+    SetAbility: 0
+  specialExplain: "\uC274\uB4DC HP\uD68C\uBCF5\uC728\uC744 \uC99D\uAC00\uC2DC\uD0A8\uB2E4.\n\uCD94\uAC00
+    \uD2B9\uC131 \uBD80\uC5EC"
+  attackRnage: 2
+  attackType: 0
+  shotCount: 0
+  shotMonsterCount: 0
+  RandomAttack: 0
+  monsterControl: 0
+  monsterControlTime: 0
+  selfSkill:
+  - ability: 9
+    value: 0.05
+    unit: 1
+    SetAbility: 0

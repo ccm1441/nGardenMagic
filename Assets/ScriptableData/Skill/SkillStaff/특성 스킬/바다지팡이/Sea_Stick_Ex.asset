@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39239bcbdecd5d24da21ebc4d35059f1, type: 3}
+  m_Name: Sea_Stick_Ex
+  m_EditorClassIdentifier: 
+  UsePassive: 0
+  Name: "\uC544\uC774\uC2A4 \uD544\uB4DC \uAC15\uD654"
+  Image: {fileID: 21300000, guid: f9fe67432fb5d94408cea208023a97b7, type: 3}
+  skillImage: {fileID: 21300000, guid: a05d6d58e4bf7d0438eacf2b41563e79, type: 3}
+  Explain: "\uB79C\uB364\uD55C \uACF3\uC5D0 \uC544\uC774\uC2A4 \uD544\uB4DC\uB97C
+    \uC2DC\uC804\uD558\uC5EC \uC801\uC744 \uBE59\uACB0\uC2DC\uD0A8\uB2E4."
+  Type: 4
+  MaxLevel: 6
+  LevelUpRewardValue:
+  - ability: 36
+    value: 10
+    unit: 0
+    SetAbility: 0
+  - ability: 13
+    value: 5
+    unit: 0
+    SetAbility: 0
+  isUniqueWeapon: 0
+  openExplain: 
+  requireMapOpen: 0
+  map: 0
+  openValue: 0
+  soundName: _skill_WaterField
+  StaffName: "\uBC14\uB2E4 \uC9C0\uD321\uC774"
+  ScriptName: 0
+  staffOption:
+  - ability: 0
+    value: 0
+    unit: 0
+    SetAbility: 0
+  BulletPrefab: {fileID: 121928, guid: 256d1b32af7979946bae79f57cad962a, type: 3}
+  BulletSpeed: 0
+  BulletMaxDistance: 0
+  AttackValue: 400
+  AttackCoolTime: 15
+  UseDuration: 1
+  DurationTime: 3
+  DurationAttackCool: 0.5
+  UseRange: 1
+  RangeDataType: 2
+  RangeCharValue: 0
+  RangeRadius: 0
+  RangeVector: {x: 5, y: 5}
+  targetingTarget: 0
+  bouncingTarget: 0
+  penetrationTarget: 0
+  bouncingTargetCount: 0
+  penetrationTargetCount: 0
+  pullTarget: 0
+  slowTarget: 0
+  StaffAddSkill: []
+  isSpecialSkill: 1
+  specialSkill:
+  - ability: 36
+    value: 30
+    unit: 0
+    SetAbility: 0
+  - ability: 38
+    value: -1
+    unit: 2
+    SetAbility: 0
+  - ability: 13
+    value: 30
+    unit: 0
+    SetAbility: 0
+  - ability: 13
+    value: -30
+    unit: 0
+    SetAbility: 1
+  - ability: 37
+    value: 50
+    unit: 0
+    SetAbility: 0
+  specialExplain: "\uC544\uC774\uC2A4 \uD544\uB4DC \uACF5\uACA9\uB825\uC744 \uAC15\uD654\uD55C\uB2E4.\n\uCD94\uAC00
+    \uD2B9\uC131 \uBD80\uC5EC"
+  attackRnage: 0
+  attackType: 1
+  shotCount: 1
+  shotMonsterCount: 1
+  RandomAttack: 0
+  monsterControl: 1
+  monsterControlTime: 1
+  selfSkill: []

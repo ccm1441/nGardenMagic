@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39239bcbdecd5d24da21ebc4d35059f1, type: 3}
+  m_Name: Wind_Stick_Ex
+  m_EditorClassIdentifier: 
+  UsePassive: 0
+  Name: "\uC708\uB4DC \uBBF8\uC0AC\uC77C \uAC15\uD654"
+  Image: {fileID: 21300000, guid: b9b6babba1e312846a9af594c3a120e5, type: 3}
+  skillImage: {fileID: 21300000, guid: 4b1ced8afbe60314c9b1e2fc8cc689c3, type: 3}
+  Explain: "\uAC00\uAE4C\uC6B4 \uC801\uC5D0\uAC8C \uC708\uB4DC \uBBF8\uC0AC\uC77C
+    2\uBC1C\uC744 \uB358\uC9C4\uB2E4."
+  Type: 2
+  MaxLevel: 6
+  LevelUpRewardValue:
+  - ability: 36
+    value: 10
+    unit: 0
+    SetAbility: 0
+  - ability: 38
+    value: -5
+    unit: 0
+    SetAbility: 0
+  isUniqueWeapon: 0
+  openExplain: 
+  requireMapOpen: 0
+  map: 0
+  openValue: 0
+  soundName: _skill_EarthMissile
+  StaffName: "\uBC14\uB78C \uC9C0\uD321\uC774"
+  ScriptName: 0
+  staffOption: []
+  BulletPrefab: {fileID: 153592, guid: 79df5b47925dc944aaea71616fa4f357, type: 3}
+  BulletSpeed: 15
+  BulletMaxDistance: 0
+  AttackValue: 400
+  AttackCoolTime: 5
+  UseDuration: 0
+  DurationTime: 0
+  DurationAttackCool: 0
+  UseRange: 1
+  RangeDataType: 2
+  RangeCharValue: 0
+  RangeRadius: 0
+  RangeVector: {x: 6, y: 6}
+  targetingTarget: 1
+  bouncingTarget: 0
+  penetrationTarget: 0
+  bouncingTargetCount: 0
+  penetrationTargetCount: 0
+  pullTarget: 0
+  slowTarget: 0
+  StaffAddSkill: []
+  isSpecialSkill: 1
+  specialSkill:
+  - ability: 36
+    value: 30
+    unit: 0
+    SetAbility: 0
+  - ability: 38
+    value: -0.1
+    unit: 2
+    SetAbility: 0
+  - ability: 17
+    value: 1
+    unit: 1
+    SetAbility: 1
+  - ability: 36
+    value: -50
+    unit: 0
+    SetAbility: 0
+  - ability: 22
+    value: 1
+    unit: 1
+    SetAbility: 0
+  specialExplain: "\uC708\uB4DC \uBBF8\uC0AC\uC77C \uACF5\uACA9\uB825\uC744 \uAC15\uD654\uD55C\uB2E4.\n\uCD94\uAC00
+    \uD2B9\uC131 \uBD80\uC5EC"
+  attackRnage: 0
+  attackType: 0
+  shotCount: 2
+  shotMonsterCount: 1
+  RandomAttack: 0
+  monsterControl: 0
+  monsterControlTime: 0
+  selfSkill: []

@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 426097d217757e2439d2a2ae8d95f989, type: 3}
+  m_Name: Earth_Rune_04
+  m_EditorClassIdentifier: 
+  Name: "\uC5B4\uC2A4\uD018\uC774\uD06C \uAC15\uD654 \uB8EC"
+  Image: {fileID: 21300000, guid: 2bf6fa57bc7e48349a4e10ee8000c0a7, type: 3}
+  RuneType: 1
+  ProType: 3
+  Explain: "\uC5B4\uC2A4\uD018\uC774\uD06C\uC758 \uD06C\uAE30\uAC00 2\uBC30 \uC99D\uAC00\uD55C\uB2E4.\n\uC9C0\uC18D\uC2DC\uAC04
+    2\uCD08 \uC99D\uAC00"
+  UseCustomAbility: 0
+  CommonAbility: 1
+  UseClass: 0
+  CValue: 5
+  BValue: 10
+  AValue: 15
+  SValue: 20
+  SPValue: 30
+  AllValue: 0
+  targetSkill: 4
+  normalAbilityList:
+  - ability: 6
+    value: 100
+    unit: 1
+  - ability: 8
+    value: 2
+    unit: 0

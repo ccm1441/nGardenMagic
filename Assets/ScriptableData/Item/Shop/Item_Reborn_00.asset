@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf8b959b7c7c7d40b46db3f1d681ebf, type: 3}
+  m_Name: Item_Reborn_00
+  m_EditorClassIdentifier: 
+  Image: {fileID: 21300000, guid: 2b6b0d3941cee5547bef91e5dffb8201, type: 3}
+  Name: "\uBD80\uD65C\uC758 \uAD6C\uC2AC"
+  Type: 5
+  Explain: "\uCE90\uB9AD\uD130\uAC00 \uC0AC\uB9DD \uC2DC 50% HP\uB97C \uAC00\uC9C4
+    \uCC44 \uBD80\uD65C \uD55C\uB2E4.\n(\uD558\uB098\uB9CC \uC18C\uC9C0 \uAC00\uB2A5,
+    \uBD80\uD65C \uC2DC 3\uCD08\uAC04 \uBB34\uC801)"
+  Value: 50
+  Price: 3000
+  Probability: 0.5
+  DetailNormalProbability: 0
+  DetailClassProbability: 0
+  ProbabilityList: []
+  itemSound: {fileID: 0}

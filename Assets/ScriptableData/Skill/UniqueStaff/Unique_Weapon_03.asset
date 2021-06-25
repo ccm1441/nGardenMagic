@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39239bcbdecd5d24da21ebc4d35059f1, type: 3}
+  m_Name: Unique_Weapon_03
+  m_EditorClassIdentifier: 
+  UsePassive: 0
+  Name: "\uC36C\uB354"
+  Image: {fileID: 2439826247251700659, guid: 2ffd7ce32883c61469c7812b8eb342c9, type: 3}
+  skillImage: {fileID: 0}
+  Explain: "\uBC88\uAC1C\uC18D\uC131\uC744 \uAC15\uD654 \uD55C\uB2E4."
+  Type: 1
+  MaxLevel: 1
+  LevelUpRewardValue:
+  - ability: 0
+    value: 10
+    unit: 0
+    SetAbility: 0
+  - ability: 6
+    value: -5
+    unit: 0
+    SetAbility: 0
+  isUniqueWeapon: 1
+  openExplain: "\uCD08\uC6D0\uC5D0\uC11C \uCE90\uB9AD\uD130 10\uB808\uBCA8 \uB2EC\uC131\uD558\uAE30"
+  requireMapOpen: 2
+  map: 1
+  openValue: 1
+  soundName: _skill_FireBall
+  StaffName: "\uAE30\uBCF8 \uC9C0\uD321\uC774"
+  ScriptName: 0
+  staffOption: []
+  BulletPrefab: {fileID: 4981573797153685139, guid: 8307a7456f4129c43bce8fdeebf03844,
+    type: 3}
+  BulletSpeed: 15
+  BulletMaxDistance: 0
+  AttackValue: 100
+  AttackCoolTime: 1
+  UseDuration: 0
+  DurationTime: 0
+  DurationAttackCool: 0
+  UseRange: 1
+  RangeDataType: 2
+  RangeCharValue: 0
+  RangeRadius: 0
+  RangeVector: {x: 1, y: 1}
+  targetingTarget: 1
+  bouncingTarget: 0
+  penetrationTarget: 0
+  bouncingTargetCount: 0
+  penetrationTargetCount: 0
+  pullTarget: 0
+  slowTarget: 0
+  StaffAddSkill: []
+  isSpecialSkill: 0
+  specialSkill: []
+  specialExplain: 
+  attackRnage: 0
+  attackType: 0
+  shotCount: 1
+  shotMonsterCount: 1
+  RandomAttack: 0
+  monsterControl: 0
+  monsterControlTime: 0
+  selfSkill: []

@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39239bcbdecd5d24da21ebc4d35059f1, type: 3}
+  m_Name: Wind_Warmhole
+  m_EditorClassIdentifier: 
+  UsePassive: 0
+  Name: "\uC6DC\uD640 \uAC15\uD654"
+  Image: {fileID: 21300000, guid: 8e60dda423b9c4c4bb48f07e74176aa9, type: 3}
+  skillImage: {fileID: 21300000, guid: 38047e6e6fad82344afbea658c6ee087, type: 3}
+  Explain: "\uB79C\uB364\uD55C \uACF3\uC5D0 \uC801\uC744 \uBE68\uC544\uB4E4\uC774\uB294
+    \uC6DC\uD640\uC744 \uBC1C\uC0DD\uC2DC\uD0A8\uB2E4."
+  Type: 2
+  MaxLevel: 6
+  LevelUpRewardValue:
+  - ability: 38
+    value: -5
+    unit: 0
+    SetAbility: 0
+  isUniqueWeapon: 0
+  openExplain: 
+  requireMapOpen: 0
+  map: 0
+  openValue: 0
+  soundName: _skill_Whomhole
+  StaffName: "\uD0DC\uD48D \uC9C0\uD321\uC774"
+  ScriptName: 0
+  staffOption:
+  - ability: 0
+    value: 0
+    unit: 0
+    SetAbility: 0
+  BulletPrefab: {fileID: 100000, guid: bfbd9755d57f2e44b8cfe26411424ddd, type: 3}
+  BulletSpeed: 1
+  BulletMaxDistance: 0
+  AttackValue: 300
+  AttackCoolTime: 5
+  UseDuration: 1
+  DurationTime: 2
+  DurationAttackCool: 0.5
+  UseRange: 1
+  RangeDataType: 2
+  RangeCharValue: 0
+  RangeRadius: 0
+  RangeVector: {x: 3, y: 3}
+  targetingTarget: 0
+  bouncingTarget: 0
+  penetrationTarget: 0
+  bouncingTargetCount: 0
+  penetrationTargetCount: 0
+  pullTarget: 1
+  slowTarget: 0
+  StaffAddSkill:
+  - {fileID: 11400000, guid: 06670324bdb3183439e3367e36aa9ccf, type: 2}
+  - {fileID: 11400000, guid: a0333b3030c3fe346a62cdc42725674c, type: 2}
+  isSpecialSkill: 1
+  specialSkill:
+  - ability: 36
+    value: 30
+    unit: 0
+    SetAbility: 0
+  - ability: 38
+    value: -0.5
+    unit: 0
+    SetAbility: 0
+  - ability: 28
+    value: 20
+    unit: 0
+    SetAbility: 0
+  - ability: 23
+    value: -0.1
+    unit: 0
+    SetAbility: 1
+  - ability: 38
+    value: 1
+    unit: 0
+    SetAbility: 0
+  specialExplain: "\uC6DC\uD640 \uACF5\uACA9\uB825\uC744 \uAC15\uD654\uD55C\uB2E4.\n\uCD94\uAC00
+    \uD2B9\uC131 \uBD80\uC5EC"
+  attackRnage: 0
+  attackType: 1
+  shotCount: 1
+  shotMonsterCount: 1
+  RandomAttack: 1
+  monsterControl: 0
+  monsterControlTime: 0
+  selfSkill: []

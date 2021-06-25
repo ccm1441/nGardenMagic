@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39239bcbdecd5d24da21ebc4d35059f1, type: 3}
+  m_Name: Earth_Cooldown
+  m_EditorClassIdentifier: 
+  UsePassive: 1
+  Name: "\uB300\uC9C0 \uC18D\uC131 \uCFE8\uD0C0\uC784 \uAC10\uC18C"
+  Image: {fileID: 21300000, guid: f0d36263424196545b008c586515d381, type: 3}
+  skillImage: {fileID: 0}
+  Explain: 
+  Type: 3
+  MaxLevel: 2
+  LevelUpRewardValue:
+  - ability: 6
+    value: -5
+    unit: 0
+    SetAbility: 0
+  isUniqueWeapon: 0
+  openExplain: 
+  requireMapOpen: 0
+  map: 0
+  openValue: 0
+  soundName: 
+  StaffName: 
+  ScriptName: 0
+  staffOption: []
+  BulletPrefab: {fileID: 0}
+  BulletSpeed: 0
+  BulletMaxDistance: 0
+  AttackValue: 0
+  AttackCoolTime: 0
+  UseDuration: 0
+  DurationTime: 0
+  DurationAttackCool: 0
+  UseRange: 0
+  RangeDataType: 0
+  RangeCharValue: 0
+  RangeRadius: 0
+  RangeVector: {x: 0, y: 0}
+  targetingTarget: 0
+  bouncingTarget: 0
+  penetrationTarget: 0
+  bouncingTargetCount: 0
+  penetrationTargetCount: 0
+  pullTarget: 0
+  slowTarget: 0
+  StaffAddSkill: []
+  isSpecialSkill: 0
+  specialSkill: []
+  specialExplain: 
+  attackRnage: 0
+  attackType: 0
+  shotCount: 0
+  shotMonsterCount: 0
+  RandomAttack: 0
+  monsterControl: 0
+  monsterControlTime: 0
+  selfSkill: []

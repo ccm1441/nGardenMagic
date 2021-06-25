@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 426097d217757e2439d2a2ae8d95f989, type: 3}
+  m_Name: Water_Rune_05
+  m_EditorClassIdentifier: 
+  Name: "\uC544\uC774\uC2A4 \uD544\uB4DC \uC99D\uD3ED \uB8EC"
+  Image: {fileID: 21300000, guid: 11bcc9eb69e66b748b2a98d3ee24e8e0, type: 3}
+  RuneType: 1
+  ProType: 4
+  Explain: "\uCE90\uB9AD\uD130 \uC8FC\uBCC0\uC5D0 \uB098\uC628\uB2E4.\n\uC544\uC774\uC2A4
+    \uD544\uB4DC \uBC94\uC704 50% \uC99D\uAC00, \uB370\uBBF8\uC9C0 -100 \uAC10\uC18C"
+  UseCustomAbility: 0
+  CommonAbility: 1
+  UseClass: 0
+  CValue: 5
+  BValue: 10
+  AValue: 15
+  SValue: 20
+  SPValue: 30
+  AllValue: 0
+  targetSkill: 8
+  normalAbilityList:
+  - ability: 6
+    value: 50
+    unit: 0
+  - ability: 2
+    value: -100
+    unit: 0
+  - ability: 12
+    value: 2
+    unit: 0

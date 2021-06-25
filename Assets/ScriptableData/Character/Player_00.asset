@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e93ab6ed997f2c84d805bc271ea2afd8, type: 3}
+  m_Name: Player_00
+  m_EditorClassIdentifier: 
+  playerName_KR: "1\uAE09 \uB9C8\uBC95\uC0AC"
+  playerName_EN: Basic Wizard
+  price: 0
+  explain_KR: "\uBAA8\uB4E0 \uC18D\uC131\uC744 \uB3D9\uC77C\uD558\uAC8C \uC0AC\uC6A9
+    \uD55C\uB2E4."
+  explain_EN: All properties are handle at normal levels.
+  playerObject: {fileID: 3826988561011473525, guid: f06d36ba6d54cae448a23ba2533e32d4,
+    type: 3}
+  hpValue: 100
+  moveSpeed: 5
+  attackValue: 15
+  fireValue: 100
+  electricityValue: 100
+  windValue: 100
+  earthValue: 100
+  waterValue: 100
+  clearValue: 100

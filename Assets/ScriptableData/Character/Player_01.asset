@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e93ab6ed997f2c84d805bc271ea2afd8, type: 3}
+  m_Name: Player_01
+  m_EditorClassIdentifier: 
+  playerName_KR: "2\uAE09 \uB9C8\uBC95\uC0AC"
+  playerName_EN: Water Wizard
+  price: 3000
+  explain_KR: "\uB0AE\uC740 \uBD88 \uC18D\uC131\uACFC \uB192\uC740 \uBB3C \uC18D\uC131\uC744
+    \uAC00\uC9C4\uB2E4."
+  explain_EN: It handle with water properties well, but it does not handle fire properties
+    well.
+  playerObject: {fileID: 5221236902322916734, guid: e6affa3cf3c54044ead7d9dc4018e156,
+    type: 3}
+  hpValue: 80
+  moveSpeed: 5
+  attackValue: 20
+  fireValue: 80
+  electricityValue: 100
+  windValue: 100
+  earthValue: 100
+  waterValue: 120
+  clearValue: 100

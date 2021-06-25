@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94f3132249a0e064cba535a21f29a856, type: 3}
+  m_Name: Monster_Gold_Slime_00
+  m_EditorClassIdentifier: 
+  Name: "\uC2AC\uB77C\uC784(\uACE8\uB4DC)"
+  StartSpawnTime: {x: 0, y: 40}
+  AttackType: 1
+  color: {r: 1, g: 1, b: 0, a: 1}
+  MonsterPrefab: {fileID: 7577595726372694641, guid: cd9e61e321d446147ad1e1fdb33f4f6c,
+    type: 3}
+  BulletPrefab: {fileID: 0}
+  AttackRange: 0
+  AttackTime: 0
+  Damage: 25
+  Speed: 4.2
+  HP: 50
+  EXP: 10
+  ReSpawnTime: 1
+  RespawnCount: 1
+  sound: {fileID: 8300000, guid: 67e24aa166c85a447a2f4c490ad58ec3, type: 3}
+  useHitReAction: 0
+  reactionType: 0
+  reactionColor: {r: 0, g: 0, b: 0, a: 0}
+  reactionSpeed: 0
+  spawnMap: 1

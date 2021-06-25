@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81ef79dea95b5f94094531a7eb22fb9e, type: 3}
+  m_Name: Magic_Meteor
+  m_EditorClassIdentifier: 
+  Name: Meteor
+  StartTime: {x: 5, y: 0}
+  Type: 0
+  CastingTime: 5
+  Damage: 40
+  AttackTime: 1
+  Range: 4
+  Count: 3
+  ReCastingTime: 20
+  AttackEffect: {fileID: 4399963387297913228, guid: f7ff15da49861734ba7068b8aeb8ee45,
+    type: 3}

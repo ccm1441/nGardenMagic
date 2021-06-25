@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66f1324348ce5dd44bcca562cbb34cb1, type: 3}
+  m_Name: Map_00
+  m_EditorClassIdentifier: 
+  mapIndex: 0
+  mapName: "\uCD08\uC6D0"
+  image: {fileID: 21300000, guid: e826e887c47456742851f121e875f045, type: 3}
+  phase: "\uC26C\uC6C0"
+  openTime: 0
+  mapAbilityList: []
+  tilebase:
+  - {fileID: 11400000, guid: d4c402011d90977419263b9416175458, type: 2}
+  - {fileID: 11400000, guid: a176f8e0840d05e47a4f57bf0a57573a, type: 2}
+  - {fileID: 11400000, guid: a39571e34e40d9140bccb9a365407516, type: 2}
+  mapEtcObj:
+  - {fileID: 8447866224621526302, guid: 3802df8b3f130934c893a32195790017, type: 3}
+  - {fileID: 2850851225511436745, guid: 7fa8344935e764b499d41a0a36293f8a, type: 3}
+  background: {fileID: 21300000, guid: 1f57c03fe56c3ed4f9ce7922537a2288, type: 3}

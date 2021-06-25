@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39239bcbdecd5d24da21ebc4d35059f1, type: 3}
+  m_Name: Storm_Stick
+  m_EditorClassIdentifier: 
+  UsePassive: 0
+  Name: "\uC6DC\uD640"
+  Image: {fileID: 21300000, guid: 8e60dda423b9c4c4bb48f07e74176aa9, type: 3}
+  skillImage: {fileID: 21300000, guid: 1e9b96c70fb1d444c93f1007dc335a40, type: 3}
+  Explain: "\uB79C\uB364\uD55C \uACF3\uC5D0 \uC801\uC744 \uBE68\uC544\uB4E4\uC774\uB294
+    \uC6DC\uD640\uC744 \uBC1C\uC0DD\uC2DC\uD0A8\uB2E4."
+  Type: 2
+  MaxLevel: 3
+  LevelUpRewardValue:
+  - ability: 38
+    value: -5
+    unit: 0
+    SetAbility: 0
+  isUniqueWeapon: 0
+  openExplain: 
+  requireMapOpen: 0
+  map: 0
+  openValue: 0
+  soundName: _skill_Whomhole
+  StaffName: "\uD0DC\uD48D \uC9C0\uD321\uC774"
+  ScriptName: 0
+  staffOption:
+  - ability: 0
+    value: 10
+    unit: 0
+    SetAbility: 0
+  BulletPrefab: {fileID: 100000, guid: bfbd9755d57f2e44b8cfe26411424ddd, type: 3}
+  BulletSpeed: 0
+  BulletMaxDistance: 0
+  AttackValue: 150
+  AttackCoolTime: 5
+  UseDuration: 1
+  DurationTime: 1
+  DurationAttackCool: 0.5
+  UseRange: 1
+  RangeDataType: 2
+  RangeCharValue: 0
+  RangeRadius: 0
+  RangeVector: {x: 2, y: 2}
+  targetingTarget: 0
+  bouncingTarget: 0
+  penetrationTarget: 0
+  bouncingTargetCount: 0
+  penetrationTargetCount: 0
+  pullTarget: 1
+  slowTarget: 0
+  StaffAddSkill:
+  - {fileID: 11400000, guid: 335fb327f2164f84bb4f1d83ec73c8e4, type: 2}
+  - {fileID: 11400000, guid: dcc7d72c923ee1043ad26f9456e45d20, type: 2}
+  isSpecialSkill: 0
+  specialSkill: []
+  specialExplain: 
+  attackRnage: 0
+  attackType: 1
+  shotCount: 1
+  shotMonsterCount: 1
+  RandomAttack: 1
+  monsterControl: 0
+  monsterControlTime: 0
+  selfSkill: []

@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39239bcbdecd5d24da21ebc4d35059f1, type: 3}
+  m_Name: Fire_Meteor
+  m_EditorClassIdentifier: 
+  UsePassive: 0
+  Name: "\uBA54\uD14C\uC624"
+  Image: {fileID: 21300000, guid: fd4dd56b876133340a610402a2a1023c, type: 3}
+  skillImage: {fileID: 21300000, guid: d14934a5e7a07ac4bba65a0b7d5bdc7d, type: 3}
+  Explain: "\uB79C\uB364\uD55C \uACF3\uC5D0 \uBD88\uD0C0\uB294 \uC6B4\uC11D\uC744
+    \uB5A8\uC5B4\uB728\uB9B0\uB2E4"
+  Type: 0
+  MaxLevel: 6
+  LevelUpRewardValue:
+  - ability: 36
+    value: 10
+    unit: 0
+    SetAbility: 0
+  - ability: 13
+    value: 5
+    unit: 0
+    SetAbility: 0
+  isUniqueWeapon: 0
+  openExplain: 
+  requireMapOpen: 0
+  map: 0
+  openValue: 0
+  soundName: _skill_FireBall
+  StaffName: "\uD3ED\uC5FC \uC9C0\uD321\uC774"
+  ScriptName: 0
+  staffOption: []
+  BulletPrefab: {fileID: 100004, guid: 5da1b881b5baa7a459c7d0d237788cb3, type: 3}
+  BulletSpeed: 30
+  BulletMaxDistance: 30
+  AttackValue: 500
+  AttackCoolTime: 15
+  UseDuration: 1
+  DurationTime: 2
+  DurationAttackCool: 0.5
+  UseRange: 1
+  RangeDataType: 2
+  RangeCharValue: 1
+  RangeRadius: 0
+  RangeVector: {x: 3, y: 3}
+  targetingTarget: 0
+  bouncingTarget: 0
+  penetrationTarget: 0
+  bouncingTargetCount: 0
+  penetrationTargetCount: 0
+  pullTarget: 0
+  slowTarget: 0
+  StaffAddSkill: []
+  isSpecialSkill: 1
+  specialSkill:
+  - ability: 36
+    value: 30
+    unit: 0
+    SetAbility: 0
+  - ability: 38
+    value: -1
+    unit: 2
+    SetAbility: 0
+  - ability: 13
+    value: 30
+    unit: 0
+    SetAbility: 0
+  - ability: 37
+    value: 10
+    unit: 0
+    SetAbility: 0
+  specialExplain: "\uBB34\uC791\uC704\uD55C \uACF3\uC5D0 \uBD88\uD0C0\uB294 \uC6B4\uC11D\uC744
+    \uB5A8\uC5B4\uB728\uB9B0\uB2E4.\r\n\uCD94\uAC00 \uD2B9\uC131 \uBD80\uC5EC, \uC2A4\uD0AC
+    \uBCC0\uACBD\r\n"
+  attackRnage: 0
+  attackType: 1
+  shotCount: 1
+  shotMonsterCount: 1
+  RandomAttack: 0
+  monsterControl: 2
+  monsterControlTime: 0
+  selfSkill: []

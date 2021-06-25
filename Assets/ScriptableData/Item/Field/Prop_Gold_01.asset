@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf8b959b7c7c7d40b46db3f1d681ebf, type: 3}
+  m_Name: Prop_Gold_01
+  m_EditorClassIdentifier: 
+  Image: {fileID: 21300000, guid: be69dd8577df89c45ac9dc6748a4b11d, type: 3}
+  Name: "\uACE8\uB4DC \uAFB8\uB7EC\uBBF8"
+  Type: 7
+  Explain: "30 \uACE8\uB4DC\uB97C \uD68D\uB4DD \uD55C\uB2E4."
+  Value: 30
+  Price: 0
+  Probability: 9
+  DetailNormalProbability: 0
+  DetailClassProbability: 0
+  ProbabilityList: []
+  itemSound: 30Gold
