@@ -35,3 +35,4 @@ MonoBehaviour:
   - {fileID: 7921016437200213841, guid: 407604b42c5971b4893de2c47a451ed7, type: 3}
   - {fileID: 3019585303038817917, guid: 16d7d162f2e91864ca8b04fcd5a1cda5, type: 3}
   background: {fileID: 21300000, guid: 09b31517b40136541b4602fb654aa72a, type: 3}
+  removeLimit: 0

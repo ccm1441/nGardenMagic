@@ -8,9 +8,19 @@ public class PlayerSelfSkill : SkillUtility
 
     public override void Init(WeaponSlot weapon) => base.Init(weapon);
 
-    private void Start()
-    { 
-        // 스킬능력에 따른 코루틴 작동
+    private void OnEnable()
+    {
+        StartCoroutine(StartWait());
+    }
+
+    IEnumerator StartWait()
+    {
+        yield return new WaitUntil(() => _skillInfo != null);
+        SettingSkillData();
+    }
+
+    private void SettingSkillData()
+    {
         StartCoroutine(OnOffAttack());
 
         for (int i = 0; i < _skillInfo.selfSkill.Count; i++)

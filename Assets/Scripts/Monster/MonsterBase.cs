@@ -39,7 +39,7 @@ public class MonsterBase : MonoBehaviour
     private int _upgradeValue;
     private Color color;
     private Vector3 _beforeScale;
-    private float _distance;
+    public float _distance;
     private int _removeLimit = 30;
     private bool _targetChange;
 
@@ -71,7 +71,6 @@ public class MonsterBase : MonoBehaviour
             direction = (GameManager.GetInstance().player.transform.position - transform.position).normalized;
             _isStraight = true;
         }
-
     }
 
 
@@ -91,7 +90,8 @@ public class MonsterBase : MonoBehaviour
         else if (_isStraight)
         {
             StraightAttack();
-            if(_distance >= 15) _portal.ReturnMonster(gameObject);
+            _distance = Vector3.Distance(_player.transform.position, transform.position);
+            if (_distance >= 15) _portal.ReturnMonster(gameObject);
             return;
         }
 
@@ -119,12 +119,13 @@ public class MonsterBase : MonoBehaviour
 
     private void MonsterMove()
     {
-        if (_moveStop) return;
+        if (_moveStop || GameManager.GetInstance().monsterPause) return;
 
         transform.Translate(GetTargetDirection() * speed * Time.deltaTime);
        _distance = Vector3.Distance(_player.transform.position, transform.position);
       
-        if (_distance >= GameManager.GetInstance().testRemoveLimit) _portal.ReturnMonster(gameObject);
+        // 삭제 리밋
+        if (_distance >= 30) _portal.ReturnMonster(gameObject);
         else if (_distance >= 10) _rd.simulated = false;
         else _rd.simulated = true;
     }

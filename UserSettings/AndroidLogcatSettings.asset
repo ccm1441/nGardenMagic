@@ -3,63 +3,63 @@
     "m_SelectedPackage": {
         "deviceId": "ce0917192a283c2c057e",
         "name": "com.ngarden.staff",
-        "processId": 3762,
+        "processId": 19294,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "ce0917192a283c2c057e",
-            "name": "com.sec.android.app.launcher",
-            "processId": 11894,
+            "name": "com.ngarden.staff",
+            "processId": 29411,
+            "exited": true
+        },
+        {
+            "deviceId": "ce0917192a283c2c057e",
+            "name": "com.ngarden.staff",
+            "processId": 30951,
+            "exited": true
+        },
+        {
+            "deviceId": "ce0917192a283c2c057e",
+            "name": "com.ngarden.staff",
+            "processId": 31812,
+            "exited": true
+        },
+        {
+            "deviceId": "ce0917192a283c2c057e",
+            "name": "com.ngarden.staff",
+            "processId": 1188,
+            "exited": true
+        },
+        {
+            "deviceId": "ce0917192a283c2c057e",
+            "name": "com.ngarden.staff",
+            "processId": 3134,
+            "exited": true
+        },
+        {
+            "deviceId": "ce0917192a283c2c057e",
+            "name": "com.ngarden.staff",
+            "processId": 3892,
             "exited": false
         },
         {
             "deviceId": "ce0917192a283c2c057e",
             "name": "com.ngarden.staff",
-            "processId": 28854,
-            "exited": true
-        },
-        {
-            "deviceId": "ce0917192a283c2c057e",
-            "name": "com.ngarden.staff",
-            "processId": 22465,
-            "exited": true
-        },
-        {
-            "deviceId": "ce0917192a283c2c057e",
-            "name": "com.ngarden.staff",
-            "processId": 24475,
-            "exited": true
-        },
-        {
-            "deviceId": "ce0917192a283c2c057e",
-            "name": "com.ngarden.staff",
-            "processId": 26139,
-            "exited": true
-        },
-        {
-            "deviceId": "ce0917192a283c2c057e",
-            "name": "com.ngarden.staff",
-            "processId": 28369,
-            "exited": true
-        },
-        {
-            "deviceId": "ce0917192a283c2c057e",
-            "name": "com.ngarden.staff",
-            "processId": 30400,
+            "processId": 6625,
             "exited": false
         },
         {
             "deviceId": "ce0917192a283c2c057e",
             "name": "com.ngarden.staff",
-            "processId": 32296,
+            "processId": 8179,
             "exited": false
         },
         {
             "deviceId": "ce0917192a283c2c057e",
             "name": "com.ngarden.staff",
-            "processId": 3762,
+            "processId": 19294,
             "exited": false
         }
     ],

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7760871653589749863}
   m_Layer: 15
   m_Name: Shadow
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -270,6 +270,7 @@ MonoBehaviour:
   speed: 0
   _hitSpeed: 0
   _hp: 999999
+  _distance: 0
 --- !u!50 &3137698324060685029
 Rigidbody2D:
   serializedVersion: 4

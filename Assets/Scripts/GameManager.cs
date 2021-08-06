@@ -70,6 +70,9 @@ public class GameManager : MonoBehaviour
     // 테스트
     public int testRemoveLimit = 30;
 
+    // 몬스터 퍼즈 
+    public bool monsterPause = false;
+
     private void Start()
     {
        adsManager = GameObject.Find("Ads").GetComponent<AdsManager>();
@@ -98,9 +101,10 @@ public class GameManager : MonoBehaviour
 
     IEnumerator UpdatePlayerPositionOfFrame()
     {
+        // 프레임 리밋
         while (true)
         {
-            yield return new WaitUntil(() => _frameCount >= settingFrameCount);
+            yield return new WaitUntil(() => _frameCount >= 25);
             playerBeforePosition = player.transform.position;
             _frameCount = 0;
         }
@@ -204,9 +208,11 @@ public class GameManager : MonoBehaviour
         _ingameUI.UpdateGameTime(currentTime);
     }
 
+    public void MonsterPause() => monsterPause = !monsterPause;
+
     public int GetGameSecond()
     {
-        return ((int)hours * 3600) + ((int)minute * 60) + (int)second;
+        return ((int)hours * 60) + ((int)minute) + (int)second / 60;
     }
 
     public void ResetSkillData()

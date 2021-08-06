@@ -16,7 +16,7 @@ MonoBehaviour:
   mapName: "\uC124\uC6D0"
   image: {fileID: 21300000, guid: 380529f412359d141b7d4a4cf0d2b39c, type: 3}
   phase: "\uC5B4\uB824\uC6C0"
-  openTime: 10
+  openTime: 15
   mapAbilityList:
   - mapAbility: 0
     value: 25
@@ -36,3 +36,4 @@ MonoBehaviour:
   - {fileID: 9180195205855927617, guid: 6e3c2f3d36809ff499d75133b30679d4, type: 3}
   - {fileID: 5901318147792542242, guid: 0e543d4e59d321d49bd3207899290485, type: 3}
   background: {fileID: 21300000, guid: 650d7718563493543a3484e0e2df6222, type: 3}
+  removeLimit: 0

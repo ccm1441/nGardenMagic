@@ -78,6 +78,7 @@ public class IngameUI : UIManager
     [SerializeField] private Transform[] _shopItemSlot;
     private bool _isOpenShop;
 
+
    
     public int MonsterCount
     {
@@ -115,9 +116,9 @@ public class IngameUI : UIManager
             _joystick.GetComponent<RectTransform>().sizeDelta = new Vector2(490, 490);
             _joystick.SetMode(JoystickType.Fixed);
         }
-
-      
     }
+
+    public void SelfPassiveUI(GameObject obj) => obj.SetActive(false);
 
     // 게임 시간 업데이트
     public void UpdateGameTime(string timeText) => _timeText.text = timeText;
@@ -268,6 +269,9 @@ public class IngameUI : UIManager
         }
     }
 
+    // 
+    public void UIReset() => AllActiveUI(_ingameUI, false);
+
     // 플레이어가 죽었을때
     public void PlayerDeadUI()
     {
@@ -276,16 +280,16 @@ public class IngameUI : UIManager
         var deadUI = _ingameUI[base.GetUIIndex(_ingameUI, "DeadUI")].transform;
         deadUI.GetChild(2).GetComponent<Text>().text = GameManager.GetInstance().currentTime;
 
-        var kill = GameManager.GetInstance().player.killMonster * 0.01f;
-        var time = GameManager.GetInstance().GetGameSecond();
+        var kill = GameManager.GetInstance().player.killMonster;
+        var time = GameManager.GetInstance().GetGameSecond() * 0.01f;
         var level = GameManager.GetInstance().player.PlayerLevel * 0.01f;
         _getGold = kill * (time + level);
 
-        if (time < 60) _getGold = 0;
+        if (time < 0.02f) _getGold = 0;
 
-        // 시간 * 60 해야함~~
-        // 설원 15로 바꾸셈~
-        if (time + 1 >= PlayerInfo.nextOpenTime) PlayerInfo.nextMapOpen = true;
+       if (time * 100 >= PlayerInfo.nextOpenTime )
+            PlayerInfo.nextMapOpen = true;
+        
         deadUI.GetChild(5).GetComponent<Text>().text = _getGold == 0 ? "0" : PlayerInfo.doubleReward ? ((int)_getGold * 2).ToString("#,###") : ((int)_getGold).ToString("#,###");
 
         deadUI.GetChild(6).GetComponent<Button>().onClick.RemoveAllListeners();
@@ -325,15 +329,27 @@ public class IngameUI : UIManager
         player.ChangePlayerAnimation("Idle_1", true);
         player.OnGodMode(3);
 
+        // 몬스터 1초 정지
+        GameManager.GetInstance().MonsterPause();
+        StartCoroutine(MonsterPause());
+
         // 광고 1회만 사용 가능하도록
         var deadUI = _ingameUI[base.GetUIIndex(_ingameUI, "DeadUI")].transform;
         deadUI.GetChild(7).GetComponent<Button>().interactable = false;
 
         // UI 닫기
-        base.SetActiveUI(_ingameUI, "DeadUI|off", true);
+        AllActiveUI(_ingameUI, false);
+        Time.timeScale = 1;
+        GameManager.GetInstance().player.StartDeathUpdate();
+        GameManager.GetInstance().player.weaponObj.SetActive(true);
+      //  base.SetActiveUI(_ingameUI, "DeadUI|off", true);
     }
 
-
+    IEnumerator MonsterPause()
+    {
+        yield return new WaitForSeconds(1.2f);
+        GameManager.GetInstance().MonsterPause();
+    }
 
     // 무기 오픈
     private void CheckWeaponOpen()
@@ -500,6 +516,7 @@ public class IngameUI : UIManager
         pause = true;
 
         print("Call");
+        GameManager.GetInstance().player.OnGodMode(1.2f);
         yield return new WaitForSeconds(1f);
         print("Resume");
         pause = false;

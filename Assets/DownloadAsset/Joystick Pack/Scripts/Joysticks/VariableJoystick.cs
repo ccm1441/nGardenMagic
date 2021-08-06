@@ -29,13 +29,15 @@ public class VariableJoystick : Joystick
         base.Start();
         fixedPosition = background.anchoredPosition;
         SetMode(joystickType);
+
+        background.anchoredPosition = Vector3.zero;
     }
 
     public override void OnPointerDown(PointerEventData eventData)
     {
         if(joystickType != JoystickType.Fixed)
         {
-            background.anchoredPosition = ScreenPointToAnchoredPosition(eventData.position);
+            background.transform.position = ScreenPointToAnchoredPosition(Input.mousePosition);
             background.gameObject.SetActive(true);            
         }
         base.OnPointerDown(eventData);

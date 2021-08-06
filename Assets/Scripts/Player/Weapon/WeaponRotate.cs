@@ -11,6 +11,7 @@ public class WeaponRotate : MonoBehaviour
     private float _addDistance;
     private Vector3 position;
     private float test;
+    private int _weaponCount;
 
     private void Start()
     {
@@ -25,23 +26,30 @@ public class WeaponRotate : MonoBehaviour
     }
 
     // 넣을때마다 360 나누어서 간격 조정해주기
-    public void ResetCircle(int index)
+    public void ResetCircle()
     {
+        _weaponCount++;
+
+        print("무기 개수 : " + _weaponCount);
         // 간격 계산
         _currentDistance = 0;
-        _addDistance = 360 / index;      
+        
+        _addDistance = 360 / _weaponCount;      
 
         // 각격 적용
-        for (int i = 0; i < index; i++)
+        for (int i = 0; i < transform.childCount; i++)
         {
-            var obj = transform.GetChild(i);
+            var obj = transform.GetChild(i).GetComponent<WeaponSlot>();
+
+            if (!obj.gameObject.activeSelf) break;
+            if (obj.skillInfo.UsePassive) continue;
 
             obj.gameObject.SetActive(true);
             position.x = _radius * Mathf.Cos(_currentDistance * Mathf.Deg2Rad) ;
             position.y = 0;
             position.z = _radius * Mathf.Sin(_currentDistance  * Mathf.Deg2Rad);
                   
-            obj.localPosition = position;
+            obj.transform.localPosition = position;
             _currentDistance += _addDistance;
         }
     }

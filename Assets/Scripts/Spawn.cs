@@ -295,7 +295,7 @@ public class Spawn : MonoBehaviour
         }
 
         // 맵 풀링
-        for (int i = 0; i < 30; i++)
+        for (int i = 0; i < 12; i++)
         {
             var obj = Instantiate(_mapPrefab, _mapParent).transform;
             obj.GetChild(2).GetComponent<SpriteRenderer>().sprite = mapData[PlayerInfo.currentMap].background;

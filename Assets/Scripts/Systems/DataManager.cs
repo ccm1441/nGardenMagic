@@ -114,6 +114,8 @@ public class DataManager : MonoBehaviour
         Data data = new Data();
         data.gold = gold;
         data.weaponOpenArray = PlayerInfo.weaponOpenArray;
+        data.removeADs = PlayerInfo.removeADs;
+        data.doubleReward = PlayerInfo.doubleReward;
 
         string jsonData = JsonUtility.ToJson(data);
         jsonData = AESEncrypt128(jsonData);
@@ -165,6 +167,8 @@ public class DataManager : MonoBehaviour
                 jsonData = AESDecrypt128(jsonData);
                 data = JsonUtility.FromJson<Data>(jsonData);
                 PlayerInfo.gold = data.gold;
+                PlayerInfo.removeADs = data.removeADs;
+                PlayerInfo.doubleReward = data.doubleReward;
             }
 
             if (File.Exists(skillPath))
@@ -191,6 +195,8 @@ public class Data
 {
     public int gold;
     public int[] weaponOpenArray;
+    public bool removeADs;
+    public bool doubleReward;
 }
 
 [System.Serializable]

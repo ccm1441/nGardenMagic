@@ -7,7 +7,18 @@ public class PlayerViewSkill : SkillUtility
     // 현재 무기에 추가된 옵션을 모두 캐싱
     public override void Init(WeaponSlot weapon) => base.Init(weapon);
 
-    private void Start()
+    private void OnEnable()
+    {
+        StartCoroutine(StartWait());
+    }
+
+    IEnumerator StartWait()
+    {
+        yield return new WaitUntil(() => _skillInfo != null);
+        SettingSkillData();
+    }
+
+    private void SettingSkillData()
     {
         if (_skillInfo.attackType == 0) StartCoroutine(ViewThrowAttack());
     }

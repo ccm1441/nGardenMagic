@@ -55,6 +55,7 @@ public class LobbyUI : UIManager
     [HideInInspector] public int[] characterBuyArray;                   // 캐릭터 구매 정보 배열
     [HideInInspector] public int[] mapOpenArray;                        // 맵 오픈 정보 배열
 
+    public bool login;
     // 업그레이드 스킬 정보 배열
   // [HideInInspector]
     public UpgradSkillInfo[] upgradeDataArray = new UpgradSkillInfo[15]
@@ -148,7 +149,7 @@ public class LobbyUI : UIManager
         if (DataManager.GetInstance().Load() == null)
         {
             DataManager.GetInstance().SaveSkill(upgradeDataArray, characterBuyArray, 0, mapOpenArray);
-            DataManager.GetInstance().SaveGold(3000);
+            DataManager.GetInstance().SaveGold(300);
             DataManager.GetInstance().Load();
             return;
         }
@@ -223,7 +224,6 @@ public class LobbyUI : UIManager
     // 사운드 출력
     public void PlaySound(bool isOn)
     {
-        print("sound");
         if(isOn) AndroidNativeAudio.play(FileID_Yes);
         else AndroidNativeAudio.play(FileID_No);
     }
@@ -243,10 +243,12 @@ public class LobbyUI : UIManager
             if (success)
             {
                 print("로그인 성공");
+                login = true;
             }
             else
             {
                 print("로그인 실패");
+                login = false;
                 var shopButton = _lobbyUI[base.GetUIIndex(_lobbyUI, "Lobby")];
                 shopButton.transform.GetChild(4).GetComponent<Button>().interactable = false;
             }
@@ -267,7 +269,7 @@ public class LobbyUI : UIManager
 
         // 장착한 캐릭터 오픈
         _characterList[currentChar].SetActive(true);
-
+        _characterListPage = currentChar;
         var charShop = _lobbyUI[base.GetUIIndex(_lobbyUI, "SelectChar")].transform;
         charShop.GetChild(charShop.childCount - 1).GetComponent<Text>().text = PlayerInfo.gold == 0 ? "0" : PlayerInfo.gold.ToString("#,###");
 
@@ -458,7 +460,7 @@ public class LobbyUI : UIManager
 
         //// 선택 팝업에서 왼쪽 버튼
         //base.SetPopUpButtonAction("아니요", AddButtonActionPassiveUI, false);
-
+        print("결제 성공");
         SetPopUpUIActive(result ? "결제 성공!" : "결제 실패", false, true);
         base.SetPopUpButtonAction("확인", AddButtonActionPassiveUI);
     }

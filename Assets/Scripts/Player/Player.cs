@@ -16,6 +16,7 @@ public partial class Player : MonoBehaviour
     [SerializeField] private List<GameObject> _playerList;                  // 플레이어 캐릭터 프리팹 리스트
     [SerializeField] private SkeletonAnimation _playerRoot;                 // 게임을 진행할 캐릭터 스파인 정보
     private string _currentAnimation;                                       // 현재 진행중인 애니메이션
+    public GameObject weaponObj;
 
     [Header("===== Movement =====")]
     [SerializeField] private VariableJoystick joyStick;                     // 조이스틱 오브젝트
@@ -58,6 +59,8 @@ public partial class Player : MonoBehaviour
    };
 
         StatInit();
+
+        StartCoroutine(DeadUpdate());
     }
 
     void Update()
@@ -177,7 +180,7 @@ public partial class Player : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Monster"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Monster") || collision.gameObject.layer == LayerMask.NameToLayer("OtherMonster"))
         {
             // 쉴드가 활성화 상태이면 쉴드만 삭제후 리턴
             if (isShield && !_godMode)
@@ -206,7 +209,7 @@ public partial class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Monster") && collision.CompareTag("Monster") && collision.gameObject.name == "MonsterBullet")
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Monster") && collision.gameObject.name == "MonsterBullet")
         {
             collision.gameObject.SetActive(false);
 
@@ -231,9 +234,7 @@ public partial class Player : MonoBehaviour
 
                 CurrentHP -= collision.GetComponent<MonsterBullet>().damage;
                 Invoke("SetReturnDamage", 0.5f);
-            }
-
-            
+            }            
         }
     }
 

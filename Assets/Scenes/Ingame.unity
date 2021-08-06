@@ -11390,7 +11390,7 @@ PrefabInstance:
     - target: {fileID: 1958883158493126822, guid: 556abf1133625964f9151501cbfb735a,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1958883158493126822, guid: 556abf1133625964f9151501cbfb735a,
         type: 3}
@@ -11399,7 +11399,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1958883158493126822, guid: 556abf1133625964f9151501cbfb735a,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958883158493126822, guid: 556abf1133625964f9151501cbfb735a,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1133257147}
+    - target: {fileID: 1958883158493126822, guid: 556abf1133625964f9151501cbfb735a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1133257147}
     - target: {fileID: 1958883158493126822, guid: 556abf1133625964f9151501cbfb735a,
@@ -11409,12 +11419,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1958883158493126822, guid: 556abf1133625964f9151501cbfb735a,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958883158493126822, guid: 556abf1133625964f9151501cbfb735a,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PlaySound
       objectReference: {fileID: 0}
     - target: {fileID: 1958883158493126822, guid: 556abf1133625964f9151501cbfb735a,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SelfPassiveUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958883158493126822, guid: 556abf1133625964f9151501cbfb735a,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958883158493126822, guid: 556abf1133625964f9151501cbfb735a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1958883158493126822, guid: 556abf1133625964f9151501cbfb735a,
@@ -11424,8 +11449,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1958883158493126822, guid: 556abf1133625964f9151501cbfb735a,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 903869589}
+    - target: {fileID: 1958883158493126822, guid: 556abf1133625964f9151501cbfb735a,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958883158493126822, guid: 556abf1133625964f9151501cbfb735a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1958883158638575855, guid: 556abf1133625964f9151501cbfb735a,
         type: 3}
@@ -19895,7 +19930,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1510687613
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19915,7 +19950,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1329, y: 0}
+  m_AnchoredPosition: {x: 3, y: 0}
   m_SizeDelta: {x: 1079.9998, y: 1920.0002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1510876121
@@ -25159,6 +25194,7 @@ MonoBehaviour:
   - {fileID: 5221236902322916734, guid: e6affa3cf3c54044ead7d9dc4018e156, type: 3}
   - {fileID: 7460804794329339632, guid: 02234ed3f5bd1ee41959a09f859aae2f, type: 3}
   _playerRoot: {fileID: 0}
+  weaponObj: {fileID: 902793461}
   joyStick: {fileID: 1276220312}
   moveSpeed: 0
   _moveVelocity: {x: 0, y: 0}
@@ -25419,6 +25455,7 @@ MonoBehaviour:
   _skill_WaterField: 0
   _skill_WindCutter: 0
   testRemoveLimit: 30
+  monsterPause: 0
 --- !u!1 &1956364933
 GameObject:
   m_ObjectHideFlags: 0
@@ -26197,7 +26234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:

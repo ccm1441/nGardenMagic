@@ -61,15 +61,7 @@ public partial class Player : MonoBehaviour
             // 체력이 0 이하(부활 있으면 다시 회복)            
             if (value <= 0 && !_death)
             {
-                _currentHP = 0;
-                IngameUI.GetInstance().UpdateHpBar(_addMaxHP, value);
-                _death = true;
-                ChangePlayerAnimation("Die_2", false);
-
-                if (_reBorn) _playerRoot.AnimationState.Complete += RebornEvent;
-                // 애니메이션 끝나는 콜백 받으면 UI 띄우기
-                else _playerRoot.AnimationState.Complete += DeadEvent;
-
+                Death();
                 return;
             }
            
@@ -96,6 +88,23 @@ public partial class Player : MonoBehaviour
 
             IngameUI.GetInstance().UpdateHpBar(_addMaxHP, value);
         }
+    }
+
+    private void Death()
+    {
+        if (_death) return;
+
+        _currentHP = 0;
+        _death = true;
+        weaponObj.SetActive(false);
+        IngameUI.GetInstance().UpdateHpBar(_addMaxHP,0);
+        ChangePlayerAnimation("Die_2", false);
+        IngameUI.GetInstance().UIReset();
+        // CalculateEXP(_maxExp - 1);
+
+        if (_reBorn) _playerRoot.AnimationState.Complete += RebornEvent;
+        // 애니메이션 끝나는 콜백 받으면 UI 띄우기
+        else _playerRoot.AnimationState.Complete += DeadEvent;
     }
 
     /// <summary>
@@ -303,6 +312,30 @@ public partial class Player : MonoBehaviour
         CalculateEXP(_beforeMaxExp * 30f * 0.01f);
     }
 
+    public void StartDeathUpdate()
+    {
+        StartCoroutine(DeadUpdate());
+    }
+
+    IEnumerator DeadUpdate()
+    {
+        print("Start");
+        while (true)
+        {
+            if (CurrentHP == 0)
+            {
+                Death();
+                yield break;
+            }
+
+           // if (_death) Time.timeScale = 0;
+
+            yield return null;
+
+        }
+        print("End");
+
+    }
 
     /// <summary>
     /// 스킬 능력치에 따른 값 적용

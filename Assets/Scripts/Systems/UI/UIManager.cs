@@ -21,11 +21,13 @@ public class UIManager : MonoBehaviour
     protected delegate void ButtonAction(Button button);
     protected delegate void ButtonAction<T>(Button button, T info);
 
+    private List<GameObject> _currentOpenUI = new List<GameObject>();
+
     /// <summary>
     /// 버튼 사운드 재생
     /// </summary>
     /// <param name="yes"></param>
-   protected void PlayButtonSound(bool yes)
+    protected void PlayButtonSound(bool yes)
     {
         if (yes)
         {
@@ -62,22 +64,68 @@ public class UIManager : MonoBehaviour
         var popUpName = value.Substring(0, splitIndex);
         var flag = value.Substring(splitIndex + 1) == "off" ? false : true;
 
-        if (timeStop) Time.timeScale = flag ? 0 : 1;
-
         for (int i = 0; i < UI.Count; i++)
         {
             if (UI[i].name.Contains(popUpName))
             {
-               if(passiveBefore) UI[_activeUIIndex].SetActive(!flag);
+                if (passiveBefore && _currentOpenUI.Count > 0)
+                {
+                    UI[_activeUIIndex].SetActive(!flag);
+
+                    int index = _currentOpenUI.FindIndex((x) => x == UI[_activeUIIndex]);
+                    print(index);
+                    if(index != -1)                    _currentOpenUI.RemoveAt(index);
+                }
 
                 UI[i].SetActive(flag);
+
+                print(flag);
+
+                if (flag)
+                {
+                    _currentOpenUI.Add(UI[i]);
+                }
+                else
+                {
+                    int index = _currentOpenUI.FindIndex((x) => x == UI[i]);
+                    if (index != -1) _currentOpenUI.RemoveAt(index);
+                }
+
+                print("현재 열린 UI 개수 : " + _currentOpenUI.Count);
 
                 _isActiveUI = flag;
                 _activeUIIndex = i;
 
                 break;
             }
-        }       
+        }
+
+        if (timeStop)
+        {
+            if (_currentOpenUI.Count == 0)
+                Time.timeScale = 1;
+            else Time.timeScale = 0;
+            //Time.timeScale = flag ? 0 : 1;
+        }
+    }
+
+    protected void AllActiveUI(List<GameObject> UI, bool value)
+    {
+        for (int i = 0; i < UI.Count; i++)
+        {
+            UI[i].SetActive(value);
+            
+        }
+        _currentOpenUI.Clear();
+    }
+
+    protected bool CheckingActiveUI(List<GameObject> UI, string name)
+    {
+        int index = UI.FindIndex((x) => x.name == name);
+
+        if (index != -1) return UI[index].activeSelf;
+
+            return false;
     }
 
     /// <summary>
@@ -88,7 +136,7 @@ public class UIManager : MonoBehaviour
     /// <param name="flag"></param>
     protected void SetPopUpUIActive(string text, bool isSelectUI, bool flag)
     {
-        if(isSelectUI)
+        if (isSelectUI)
         {
             _popUpUI[0].transform.GetChild(2).GetComponent<Text>().text = text;
             _popUpUI[0].SetActive(flag);
@@ -108,12 +156,12 @@ public class UIManager : MonoBehaviour
     protected void SetPopUpButtonAction(string text, ButtonAction action, bool isRight)
     {
         Button button;
-        if(isRight) button = _popUpUI[0].transform.GetChild(3).GetComponent<Button>();
+        if (isRight) button = _popUpUI[0].transform.GetChild(3).GetComponent<Button>();
         else button = _popUpUI[0].transform.GetChild(4).GetComponent<Button>();
 
         button.onClick.RemoveAllListeners();
         button.transform.GetChild(0).GetComponent<Text>().text = text;
-        
+
         action(button);
     }
 
@@ -139,7 +187,7 @@ public class UIManager : MonoBehaviour
     /// <param name="text"></param>
     /// <param name="action"></param>
     /// <param name="info"></param>
-    protected void SetPopUpButtonAction<T>(string text, ButtonAction<T> action , T info)
+    protected void SetPopUpButtonAction<T>(string text, ButtonAction<T> action, T info)
     {
         Button button = _popUpUI[1].transform.GetChild(3).GetComponent<Button>();
 

@@ -10,7 +10,7 @@ public class Purchaser : MonoBehaviour, IStoreListener
     private const string removeADs = "remove_ad";
     private const string doubleReward = "reward_2x";
     private const string coin5000 = "gold_5000";
-    private const string coin10000 = "gold_10000";
+    private const string coin25000 = "gold_10000";
 
     private IStoreController controller;
     private IExtensionProvider extensions;
@@ -31,14 +31,16 @@ public class Purchaser : MonoBehaviour, IStoreListener
         builder.AddProduct(removeADs, ProductType.NonConsumable);
         builder.AddProduct(doubleReward, ProductType.NonConsumable);
         builder.AddProduct(coin5000, ProductType.Consumable);
-        builder.AddProduct(coin10000, ProductType.Consumable);
+        builder.AddProduct(coin25000, ProductType.Consumable);
+        builder.AddProduct("test1111", ProductType.Consumable);
 
         UnityPurchasing.Initialize(this, builder);
     }
     public void BuyRemoveAd() => BuyProductID(removeADs);
     public void BuyDoubleReward() => BuyProductID(doubleReward);
     public void BuyCoin5000() => BuyProductID(coin5000);
-    public void BuyCoin10000() => BuyProductID(coin10000);
+    public void BuyCoin10000() => BuyProductID(coin25000);
+    public void BuyTest() => BuyProductID("test1111");
 
    private void BuyProductID(string productId)
     {
@@ -93,32 +95,41 @@ public class Purchaser : MonoBehaviour, IStoreListener
     public PurchaseProcessingResult ProcessPurchase(PurchaseEventArgs args)
     {
         var resultID = args.purchasedProduct.definition.id;
-     
+
         if(string.Equals(resultID, removeADs, StringComparison.Ordinal))
         {
             PlayerInfo.removeADs = true;
+            print(resultID + "구매 성공");
         }
        else if (string.Equals(resultID, doubleReward, StringComparison.Ordinal))
         {
             PlayerInfo.doubleReward = true;
+            print(resultID + "구매 성공");
         }
         else if (string.Equals(resultID, coin5000, StringComparison.Ordinal))
         {
             PlayerInfo.gold += 5000;
+            print(resultID + "구매 성공");
         }
-        else if (string.Equals(resultID, coin10000, StringComparison.Ordinal))
+        else if (string.Equals(resultID, coin25000, StringComparison.Ordinal))
         {
-            PlayerInfo.gold += 10000;
+            PlayerInfo.gold += 25000;
+            print(resultID + "구매 성공");
+        }
+        else if (string.Equals(resultID, "test1111", StringComparison.Ordinal))
+        {
+            PlayerInfo.gold += 11111;
+            print(resultID + "구매 성공");
         }
 
-        if (isInit)
+            lobbyUI.SettingShop();
+        dataManager.SaveGold(PlayerInfo.gold);
+        lobbyUI.ShopDataSave();
+
+        if (lobbyUI.login)
         {
             lobbyUI.ActiveShopBuyMessage(true);
-            lobbyUI.SettingShop();
-            dataManager.SaveGold(PlayerInfo.gold);
-            lobbyUI.ShopDataSave();
         }
-        else isInit = true;
      
         return PurchaseProcessingResult.Complete;
     }

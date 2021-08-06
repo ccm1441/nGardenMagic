@@ -7,10 +7,18 @@ public class PlayerAroundSkill : SkillUtility
 {
     public override void Init(WeaponSlot weapon) => base.Init(weapon);
 
-    private void Start()
+    private void OnEnable()
     {
+        StartCoroutine(StartWait());
+    }
+
+    IEnumerator StartWait()
+    {
+        print("asdfasdf");
+        yield return new WaitUntil(() => _skillInfo != null);
         SettingSkillData();
     }
+
     private void SettingSkillData()
     {
         // 던지기, 날리기

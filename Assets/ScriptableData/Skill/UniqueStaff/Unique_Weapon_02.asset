@@ -33,7 +33,7 @@ MonoBehaviour:
     1000\uAC1C \uC774\uC0C1 \uD68D\uB4DD \uD558\uAE30"
   requireMapOpen: 1
   map: 1
-  openValue: 1
+  openValue: 1000
   soundName: _skill_FireBall
   StaffName: "\uAE30\uBCF8 \uC9C0\uD321\uC774"
   ScriptName: 0

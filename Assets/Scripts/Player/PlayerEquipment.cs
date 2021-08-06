@@ -84,7 +84,7 @@ public partial class Player : MonoBehaviour
                 for (int j = 0; j < inventory.skillInfo.LevelUpRewardValue.Count; j++)
                     weaponSlot[i].SetSkillStat(inventory.skillInfo.LevelUpRewardValue[j]);
 
-                weaponSlot[i].transform.parent.GetComponent<WeaponRotate>().ResetCircle(i + 1);
+                weaponSlot[i].transform.parent.GetComponent<WeaponRotate>().ResetCircle();
                 break;
             }
 

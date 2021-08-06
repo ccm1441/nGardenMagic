@@ -262,7 +262,7 @@ public static class AndroidNativeAudio
 	/// <returns>The stream ID if successful, -1 if the play fails.</returns>
 	public static int play(int fileID, float leftVolume = 1, float rightVolume = -1, int priority = 1, int loop = 0, float rate = 1)
 	{
-		Debug.Log(_logPrefix + "play(" + fileID + ", " + leftVolume + ", " + rightVolume + ", " + priority + ", " + loop + ", " + rate + ")");
+	//	Debug.Log(_logPrefix + "play(" + fileID + ", " + leftVolume + ", " + rightVolume + ", " + priority + ", " + loop + ", " + rate + ")");
 		return 1;
 	}
 
